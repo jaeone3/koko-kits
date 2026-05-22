@@ -1,0 +1,65 @@
+Koko Cafe Ordering Kit
+Learn how to order coffee in Korean naturally.
+
+ROLES
+
+Staff
+Takes the order and asks whether the drink is for here.
+
+Customer
+Orders a drink, chooses takeout or dine-in, and pays.
+
+
+KEY PHRASES
+
+1. 아이스 아메리카노 하나 주세요.
+   One iced Americano, please.
+   Aiseu amerikano hana juseyo.
+
+2. 포장해 주세요.
+   To go, please.
+   Pojanghae juseyo.
+
+3. 여기서 마실게요.
+   I'll drink it here.
+   Yeogiseo masilgeyo.
+
+4. 카드로 할게요.
+   I'll pay by card.
+   Kadeuro halgeyo.
+
+5. 영수증 주세요.
+   Can I get a receipt?
+   Yeongsujeung juseyo.
+
+
+SHORT DIALOGUE
+
+Staff:
+뭐 드릴까요?
+What would you like?
+
+Customer:
+아이스 아메리카노 하나 주세요.
+One iced Americano, please.
+
+Staff:
+드시고 가세요?
+For here?
+
+Customer:
+포장해 주세요.
+To go, please.
+
+
+BLANK PRACTICE
+
+1. Staff: 뭐 드릴까요?
+   Customer: ________________________________
+
+2. Staff: 드시고 가세요?
+   Customer: ________________________________
+
+
+Want to practice this as a real conversation?
+Try it in Koko.
