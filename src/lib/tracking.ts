@@ -1,3 +1,5 @@
+import { getSupabaseServerClient } from "@/lib/supabase/server";
+
 type TrackEventInput = {
   eventName:
     | "page_view"
@@ -14,6 +16,26 @@ type TrackEventInput = {
 };
 
 export async function trackEvent(event: TrackEventInput) {
-  void event;
-  // Supabase persistence will be connected after the events table is created.
+  const supabase = getSupabaseServerClient();
+
+  if (!supabase) {
+    return;
+  }
+
+  const { error } = await supabase.from("events").insert({
+    event_name: event.eventName,
+    kit_slug: event.kitSlug ?? null,
+    locale: event.locale ?? null,
+    source: event.source ?? null,
+    referrer: event.referrer ?? null,
+    user_agent: event.userAgent ?? null,
+  });
+
+  if (error) {
+    console.error("Failed to track event", {
+      eventName: event.eventName,
+      kitSlug: event.kitSlug,
+      error: error.message,
+    });
+  }
 }
