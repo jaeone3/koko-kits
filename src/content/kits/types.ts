@@ -16,6 +16,7 @@ export type DialogueLine = {
   speaker: string;
   korean: string;
   english: string;
+  romanization: string;
 };
 
 export type Role = {
@@ -23,12 +24,18 @@ export type Role = {
   description: string;
 };
 
+export type QuizOption = {
+  korean: string;
+  english: string;
+  romanization: string;
+};
+
 export type QuizQuestion = {
   role?: string;
   prompt?: string;
   promptTranslation?: string;
   question: string;
-  options: string[];
+  options: QuizOption[];
   answerIndex: number;
   explanation: string;
 };

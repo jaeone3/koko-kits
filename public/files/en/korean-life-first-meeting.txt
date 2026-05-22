@@ -38,18 +38,22 @@ SHORT DIALOGUE
 New Person:
 처음 뵙겠습니다. 어디서 오셨어요?
 Nice to meet you. Where are you from?
+Cheoeum boepgesseumnida. Eodiseo osyeosseoyo?
 
 You:
-미국에서 왔어요.
+저는 미국에서 왔어요.
 I'm from the U.S.
+Jeoneun migugeseo wasseoyo.
 
 New Person:
 한국어 잘하시네요.
 Your Korean is good.
+Hangugeo jalhasineyo.
 
 You:
-아직 배우고 있어요.
-I'm still learning.
+한국어를 배우고 있어요.
+I'm learning Korean.
+Hangugeoreul baeugo isseoyo.
 
 
 BLANK PRACTICE

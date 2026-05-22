@@ -38,20 +38,24 @@ KEY PHRASES
 SHORT DIALOGUE
 
 Friend:
-도착했어?
-Are you here?
+뭐 해?
+What are you doing?
+Mwo hae?
 
 You:
 나 방금 도착했어.
-I just got here.
+I just arrived.
+Na banggeum dochakhaesseo.
 
 Friend:
-조금 늦을 것 같아.
-I think I'll be a little late.
+미안, 조금 늦을 것 같아.
+Sorry, I think I'll be a little late.
+Mian, jogeum neujeul geot gata.
 
 You:
-괜찮아. 천천히 와.
-It's okay. Take your time.
+괜찮아.
+It's fine.
+Gwaenchana.
 
 
 BLANK PRACTICE

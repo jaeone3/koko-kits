@@ -46,8 +46,8 @@ export default async function KitQuizPage({
           {kit.title}
         </h1>
         <p className="mt-3 text-muted-foreground">
-          Check whether you can recognize the right Korean response before
-          practicing the conversation in Koko.
+          See if you can pick the right Korean reply. Then practice the real
+          conversation in Koko.
         </p>
         <div className="mt-6">
           <Link

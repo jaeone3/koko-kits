@@ -38,18 +38,22 @@ SHORT DIALOGUE
 Staff:
 몇 분이세요?
 How many people?
+Myeot bunisseyo?
 
 Customer:
 두 명이요.
 Two people.
+Du myeong-iyo.
 
 Staff:
 주문하시겠어요?
 Are you ready to order?
+Jumunhasigesseoyo?
 
 Customer:
 김치찌개 하나 주세요.
 One kimchi stew, please.
+Gimchijjigae hana juseyo.
 
 
 BLANK PRACTICE

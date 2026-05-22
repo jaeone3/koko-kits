@@ -28,7 +28,7 @@ export const kits: Kit[] = [
     locale: "en",
     sortOrder: 1,
     status: "content-ready",
-    title: "Korean Cafe Ordering Kit",
+    title: "Korean Cafe Ordering",
     description: "Learn how to order coffee in Korean naturally.",
     level: "Beginner",
     purpose: "Order at a Korean cafe.",
@@ -79,21 +79,25 @@ export const kits: Kit[] = [
         speaker: "Staff",
         korean: "뭐 드릴까요?",
         english: "What would you like?",
+        romanization: "Mwo deurilkkayo?",
       },
       {
         speaker: "Customer",
         korean: "아이스 아메리카노 하나 주세요.",
         english: "One iced Americano, please.",
+        romanization: "Aiseu amerikano hana juseyo.",
       },
       {
         speaker: "Staff",
         korean: "드시고 가세요?",
         english: "For here?",
+        romanization: "Deusigo gaseyo?",
       },
       {
         speaker: "Customer",
         korean: "포장해 주세요.",
         english: "To go, please.",
+        romanization: "Pojanghae juseyo.",
       },
     ],
     quiz: [
@@ -103,9 +107,21 @@ export const kits: Kit[] = [
         promptTranslation: "What would you like?",
         question: "What do you say to order one iced Americano?",
         options: [
-          "아이스 아메리카노 하나 주세요.",
-          "포장해 주세요.",
-          "영수증 주세요.",
+          {
+            korean: "아이스 아메리카노 하나 주세요.",
+            english: "One iced Americano, please.",
+            romanization: "Aiseu amerikano hana juseyo.",
+          },
+          {
+            korean: "포장해 주세요.",
+            english: "To go, please.",
+            romanization: "Pojanghae juseyo.",
+          },
+          {
+            korean: "영수증 주세요.",
+            english: "Can I get a receipt?",
+            romanization: "Yeongsujeung juseyo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -116,7 +132,23 @@ export const kits: Kit[] = [
         prompt: "Staff says: 드시고 가세요?",
         promptTranslation: "For here?",
         question: "You want your drink to go. What do you say?",
-        options: ["포장해 주세요.", "여기서 마실게요.", "카드로 할게요."],
+        options: [
+          {
+            korean: "포장해 주세요.",
+            english: "To go, please.",
+            romanization: "Pojanghae juseyo.",
+          },
+          {
+            korean: "여기서 마실게요.",
+            english: "I'll drink it here.",
+            romanization: "Yeogiseo masilgeyo.",
+          },
+          {
+            korean: "카드로 할게요.",
+            english: "I'll pay by card.",
+            romanization: "Kadeuro halgeyo.",
+          },
+        ],
         answerIndex: 0,
         explanation:
           "Good. Use 포장해 주세요 when you want the drink packed to take away.",
@@ -127,9 +159,21 @@ export const kits: Kit[] = [
         promptTranslation: "For here?",
         question: "You want to drink it at the cafe. What do you say?",
         options: [
-          "여기서 마실게요.",
-          "영수증 주세요.",
-          "아이스 아메리카노 하나 주세요.",
+          {
+            korean: "여기서 마실게요.",
+            english: "I'll drink it here.",
+            romanization: "Yeogiseo masilgeyo.",
+          },
+          {
+            korean: "영수증 주세요.",
+            english: "Can I get a receipt?",
+            romanization: "Yeongsujeung juseyo.",
+          },
+          {
+            korean: "아이스 아메리카노 하나 주세요.",
+            english: "One iced Americano, please.",
+            romanization: "Aiseu amerikano hana juseyo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -140,7 +184,23 @@ export const kits: Kit[] = [
         prompt: "Staff points to the card reader.",
         promptTranslation: "It is time to pay.",
         question: "You want to pay by card. What do you say?",
-        options: ["영수증 주세요.", "카드로 할게요.", "포장해 주세요."],
+        options: [
+          {
+            korean: "영수증 주세요.",
+            english: "Can I get a receipt?",
+            romanization: "Yeongsujeung juseyo.",
+          },
+          {
+            korean: "카드로 할게요.",
+            english: "I'll pay by card.",
+            romanization: "Kadeuro halgeyo.",
+          },
+          {
+            korean: "포장해 주세요.",
+            english: "To go, please.",
+            romanization: "Pojanghae juseyo.",
+          },
+        ],
         answerIndex: 1,
         explanation: "Good. 카드로 할게요 is the phrase for paying by card.",
       },
@@ -160,7 +220,7 @@ export const kits: Kit[] = [
     locale: "en",
     sortOrder: 2,
     status: "content-ready",
-    title: "Korean Restaurant Ordering Kit",
+    title: "Korean Restaurant Ordering",
     description: "Say how many people and order food at a Korean restaurant.",
     level: "Beginner",
     purpose: "Order food in a Korean restaurant.",
@@ -211,21 +271,25 @@ export const kits: Kit[] = [
         speaker: "Staff",
         korean: "몇 분이세요?",
         english: "How many people?",
+        romanization: "Myeot bunisseyo?",
       },
       {
         speaker: "Customer",
         korean: "두 명이요.",
         english: "Two people.",
+        romanization: "Du myeong-iyo.",
       },
       {
         speaker: "Staff",
         korean: "주문하시겠어요?",
         english: "Are you ready to order?",
+        romanization: "Jumunhasigesseoyo?",
       },
       {
         speaker: "Customer",
         korean: "김치찌개 하나 주세요.",
         english: "One kimchi stew, please.",
+        romanization: "Gimchijjigae hana juseyo.",
       },
     ],
     quiz: [
@@ -234,7 +298,23 @@ export const kits: Kit[] = [
         prompt: "Staff says: 몇 분이세요?",
         promptTranslation: "How many people?",
         question: "There are two of you. What do you say?",
-        options: ["두 명이요.", "김치찌개 하나 주세요.", "계산할게요."],
+        options: [
+          {
+            korean: "두 명이요.",
+            english: "Two people.",
+            romanization: "Du myeong-iyo.",
+          },
+          {
+            korean: "김치찌개 하나 주세요.",
+            english: "One kimchi stew, please.",
+            romanization: "Gimchijjigae hana juseyo.",
+          },
+          {
+            korean: "계산할게요.",
+            english: "I'll pay / Check, please.",
+            romanization: "Gyesanhalgeyo.",
+          },
+        ],
         answerIndex: 0,
         explanation:
           "Good. 두 명이요 uses 두 (two) + 명 (counter for people).",
@@ -245,9 +325,21 @@ export const kits: Kit[] = [
         promptTranslation: "Are you ready to order?",
         question: "You want one kimchi stew. What do you say?",
         options: [
-          "김치찌개 하나 주세요.",
-          "물 좀 주세요.",
-          "두 명이요.",
+          {
+            korean: "김치찌개 하나 주세요.",
+            english: "One kimchi stew, please.",
+            romanization: "Gimchijjigae hana juseyo.",
+          },
+          {
+            korean: "물 좀 주세요.",
+            english: "Some water, please.",
+            romanization: "Mul jom juseyo.",
+          },
+          {
+            korean: "두 명이요.",
+            english: "Two people.",
+            romanization: "Du myeong-iyo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -258,7 +350,23 @@ export const kits: Kit[] = [
         prompt: "You need water mid-meal.",
         promptTranslation: "Asking for a refill.",
         question: "What do you say to the staff?",
-        options: ["물 좀 주세요.", "휴지 좀 주세요.", "계산할게요."],
+        options: [
+          {
+            korean: "물 좀 주세요.",
+            english: "Some water, please.",
+            romanization: "Mul jom juseyo.",
+          },
+          {
+            korean: "휴지 좀 주세요.",
+            english: "Some tissues, please.",
+            romanization: "Hyuji jom juseyo.",
+          },
+          {
+            korean: "계산할게요.",
+            english: "I'll pay / Check, please.",
+            romanization: "Gyesanhalgeyo.",
+          },
+        ],
         answerIndex: 0,
         explanation: "Good. 물 좀 주세요 politely asks for water.",
       },
@@ -267,7 +375,23 @@ export const kits: Kit[] = [
         prompt: "You walk up to the counter to settle the bill.",
         promptTranslation: "Time to pay.",
         question: "What do you say?",
-        options: ["계산할게요.", "주문하시겠어요?", "물 좀 주세요."],
+        options: [
+          {
+            korean: "계산할게요.",
+            english: "I'll pay / Check, please.",
+            romanization: "Gyesanhalgeyo.",
+          },
+          {
+            korean: "주문하시겠어요?",
+            english: "Are you ready to order?",
+            romanization: "Jumunhasigesseoyo?",
+          },
+          {
+            korean: "물 좀 주세요.",
+            english: "Some water, please.",
+            romanization: "Mul jom juseyo.",
+          },
+        ],
         answerIndex: 0,
         explanation: "Good. 계산할게요 means \"I'll pay / Check, please.\"",
       },
@@ -287,7 +411,7 @@ export const kits: Kit[] = [
     locale: "en",
     sortOrder: 1,
     status: "content-ready",
-    title: "Korean First Meeting Kit",
+    title: "Korean First Meeting",
     description: "Practice basic greetings when meeting someone new.",
     level: "Beginner",
     purpose: "Introduce yourself in a first meeting.",
@@ -338,21 +462,25 @@ export const kits: Kit[] = [
         speaker: "New Person",
         korean: "처음 뵙겠습니다. 어디서 오셨어요?",
         english: "Nice to meet you. Where are you from?",
+        romanization: "Cheoeum boepgesseumnida. Eodiseo osyeosseoyo?",
       },
       {
         speaker: "You",
-        korean: "미국에서 왔어요.",
+        korean: "저는 미국에서 왔어요.",
         english: "I'm from the U.S.",
+        romanization: "Jeoneun migugeseo wasseoyo.",
       },
       {
         speaker: "New Person",
         korean: "한국어 잘하시네요.",
         english: "Your Korean is good.",
+        romanization: "Hangugeo jalhasineyo.",
       },
       {
         speaker: "You",
-        korean: "아직 배우고 있어요.",
-        english: "I'm still learning.",
+        korean: "한국어를 배우고 있어요.",
+        english: "I'm learning Korean.",
+        romanization: "Hangugeoreul baeugo isseoyo.",
       },
     ],
     quiz: [
@@ -362,9 +490,21 @@ export const kits: Kit[] = [
         promptTranslation: "It is the very first moment of the meeting.",
         question: "What do you say?",
         options: [
-          "처음 뵙겠습니다.",
-          "만나서 반가워요.",
-          "어디서 오셨어요?",
+          {
+            korean: "처음 뵙겠습니다.",
+            english: "Nice to meet you. (formal first meeting)",
+            romanization: "Cheoeum boepgesseumnida.",
+          },
+          {
+            korean: "만나서 반가워요.",
+            english: "Nice to meet you.",
+            romanization: "Mannaseo bangawoyo.",
+          },
+          {
+            korean: "어디서 오셨어요?",
+            english: "Where are you from?",
+            romanization: "Eodiseo osyeosseoyo?",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -376,9 +516,21 @@ export const kits: Kit[] = [
         promptTranslation: "Where are you from?",
         question: "How do you reply naturally?",
         options: [
-          "미국에서 왔어요.",
-          "한국어를 배우고 있어요.",
-          "처음 뵙겠습니다.",
+          {
+            korean: "미국에서 왔어요.",
+            english: "I'm from the U.S.",
+            romanization: "Migugeseo wasseoyo.",
+          },
+          {
+            korean: "한국어를 배우고 있어요.",
+            english: "I'm learning Korean.",
+            romanization: "Hangugeoreul baeugo isseoyo.",
+          },
+          {
+            korean: "처음 뵙겠습니다.",
+            english: "Nice to meet you. (formal first meeting)",
+            romanization: "Cheoeum boepgesseumnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -390,9 +542,21 @@ export const kits: Kit[] = [
         promptTranslation: "Your Korean is good.",
         question: "What is a humble, natural reply?",
         options: [
-          "한국어를 배우고 있어요.",
-          "어디서 오셨어요?",
-          "만나서 반가워요.",
+          {
+            korean: "한국어를 배우고 있어요.",
+            english: "I'm learning Korean.",
+            romanization: "Hangugeoreul baeugo isseoyo.",
+          },
+          {
+            korean: "어디서 오셨어요?",
+            english: "Where are you from?",
+            romanization: "Eodiseo osyeosseoyo?",
+          },
+          {
+            korean: "만나서 반가워요.",
+            english: "Nice to meet you.",
+            romanization: "Mannaseo bangawoyo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -404,9 +568,21 @@ export const kits: Kit[] = [
         promptTranslation: "End of the introduction.",
         question: "What do you say?",
         options: [
-          "만나서 반가워요.",
-          "처음 뵙겠습니다.",
-          "미국에서 왔어요.",
+          {
+            korean: "만나서 반가워요.",
+            english: "Nice to meet you.",
+            romanization: "Mannaseo bangawoyo.",
+          },
+          {
+            korean: "처음 뵙겠습니다.",
+            english: "Nice to meet you. (formal first meeting)",
+            romanization: "Cheoeum boepgesseumnida.",
+          },
+          {
+            korean: "미국에서 왔어요.",
+            english: "I'm from the U.S.",
+            romanization: "Migugeseo wasseoyo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -428,7 +604,7 @@ export const kits: Kit[] = [
     locale: "en",
     sortOrder: 2,
     status: "content-ready",
-    title: "Korean Texting Kit",
+    title: "Korean Texting",
     description: "Reply naturally in short Korean chat messages.",
     level: "Beginner",
     purpose: "Send short, natural Korean replies.",
@@ -477,23 +653,27 @@ export const kits: Kit[] = [
     dialogue: [
       {
         speaker: "Friend",
-        korean: "도착했어?",
-        english: "Are you here?",
+        korean: "뭐 해?",
+        english: "What are you doing?",
+        romanization: "Mwo hae?",
       },
       {
         speaker: "You",
         korean: "나 방금 도착했어.",
-        english: "I just got here.",
+        english: "I just arrived.",
+        romanization: "Na banggeum dochakhaesseo.",
       },
       {
         speaker: "Friend",
-        korean: "조금 늦을 것 같아.",
-        english: "I think I'll be a little late.",
+        korean: "미안, 조금 늦을 것 같아.",
+        english: "Sorry, I think I'll be a little late.",
+        romanization: "Mian, jogeum neujeul geot gata.",
       },
       {
         speaker: "You",
-        korean: "괜찮아. 천천히 와.",
-        english: "It's okay. Take your time.",
+        korean: "괜찮아.",
+        english: "It's fine.",
+        romanization: "Gwaenchana.",
       },
     ],
     quiz: [
@@ -503,9 +683,21 @@ export const kits: Kit[] = [
         promptTranslation: "Are you here?",
         question: "You arrived a moment ago. What do you reply?",
         options: [
-          "나 방금 도착했어.",
-          "조금 늦을 것 같아.",
-          "나중에 연락할게.",
+          {
+            korean: "나 방금 도착했어.",
+            english: "I just arrived.",
+            romanization: "Na banggeum dochakhaesseo.",
+          },
+          {
+            korean: "조금 늦을 것 같아.",
+            english: "I think I'll be a little late.",
+            romanization: "Jogeum neujeul geot gata.",
+          },
+          {
+            korean: "나중에 연락할게.",
+            english: "I'll contact you later.",
+            romanization: "Najunge yeollakhalge.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -517,9 +709,21 @@ export const kits: Kit[] = [
         promptTranslation: "Heads up about delay.",
         question: "What do you text?",
         options: [
-          "조금 늦을 것 같아.",
-          "괜찮아?",
-          "뭐 해?",
+          {
+            korean: "조금 늦을 것 같아.",
+            english: "I think I'll be a little late.",
+            romanization: "Jogeum neujeul geot gata.",
+          },
+          {
+            korean: "괜찮아?",
+            english: "Are you ok?",
+            romanization: "Gwaenchana?",
+          },
+          {
+            korean: "뭐 해?",
+            english: "What are you doing?",
+            romanization: "Mwo hae?",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -531,9 +735,21 @@ export const kits: Kit[] = [
         promptTranslation: "I think I'll be a little late.",
         question: "What is a kind, casual reply?",
         options: [
-          "괜찮아.",
-          "뭐 해?",
-          "나중에 연락할게.",
+          {
+            korean: "괜찮아.",
+            english: "It's fine.",
+            romanization: "Gwaenchana.",
+          },
+          {
+            korean: "뭐 해?",
+            english: "What are you doing?",
+            romanization: "Mwo hae?",
+          },
+          {
+            korean: "나중에 연락할게.",
+            english: "I'll contact you later.",
+            romanization: "Najunge yeollakhalge.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -545,9 +761,21 @@ export const kits: Kit[] = [
         promptTranslation: "Closing the conversation.",
         question: "What do you text?",
         options: [
-          "나중에 연락할게.",
-          "괜찮아?",
-          "나 방금 도착했어.",
+          {
+            korean: "나중에 연락할게.",
+            english: "I'll contact you later.",
+            romanization: "Najunge yeollakhalge.",
+          },
+          {
+            korean: "괜찮아?",
+            english: "Are you ok?",
+            romanization: "Gwaenchana?",
+          },
+          {
+            korean: "나 방금 도착했어.",
+            english: "I just arrived.",
+            romanization: "Na banggeum dochakhaesseo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -569,7 +797,7 @@ export const kits: Kit[] = [
     locale: "en",
     sortOrder: 1,
     status: "content-ready",
-    title: "Korean Self Introduction Kit",
+    title: "Korean Self Introduction",
     description: "Give a simple self introduction in a formal setting.",
     level: "Beginner",
     purpose: "Introduce yourself in professional Korean.",
@@ -620,21 +848,25 @@ export const kits: Kit[] = [
         speaker: "Interviewer",
         korean: "간단히 자기소개 부탁드립니다.",
         english: "Please briefly introduce yourself.",
+        romanization: "Gandanhi jagisogae butakdeurimnida.",
       },
       {
         speaker: "Applicant",
         korean: "안녕하세요, 저는 제임스입니다.",
         english: "Hello, I'm James.",
+        romanization: "Annyeonghaseyo, jeoneun Jeimseu-imnida.",
       },
       {
         speaker: "Applicant",
         korean: "마케팅을 공부했고, 이 분야에 관심이 많습니다.",
         english: "I studied marketing and I'm very interested in this field.",
+        romanization: "Maketingeul gongbuhaetgo, i bunyae gwansimi manseumnida.",
       },
       {
         speaker: "Applicant",
         korean: "잘 부탁드립니다.",
         english: "Thank you in advance.",
+        romanization: "Jal butakdeurimnida.",
       },
     ],
     quiz: [
@@ -644,9 +876,21 @@ export const kits: Kit[] = [
         promptTranslation: "Please briefly introduce yourself.",
         question: "How do you open your introduction?",
         options: [
-          "안녕하세요, 저는 제임스입니다.",
-          "잘 부탁드립니다.",
-          "이 분야에 관심이 많습니다.",
+          {
+            korean: "안녕하세요, 저는 제임스입니다.",
+            english: "Hello, I'm James.",
+            romanization: "Annyeonghaseyo, jeoneun Jeimseu-imnida.",
+          },
+          {
+            korean: "잘 부탁드립니다.",
+            english: "Thank you in advance.",
+            romanization: "Jal butakdeurimnida.",
+          },
+          {
+            korean: "이 분야에 관심이 많습니다.",
+            english: "I'm very interested in this field.",
+            romanization: "I bunyae gwansimi manseumnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -658,9 +902,21 @@ export const kits: Kit[] = [
         promptTranslation: "Talking about academic background.",
         question: "How do you say you studied marketing?",
         options: [
-          "마케팅을 공부했습니다.",
-          "한국어를 배우고 있습니다.",
-          "안녕하세요, 저는 제임스입니다.",
+          {
+            korean: "마케팅을 공부했습니다.",
+            english: "I studied marketing.",
+            romanization: "Maketingeul gongbuhaesseumnida.",
+          },
+          {
+            korean: "한국어를 배우고 있습니다.",
+            english: "I'm learning Korean.",
+            romanization: "Hangugeoreul baeugo itseumnida.",
+          },
+          {
+            korean: "안녕하세요, 저는 제임스입니다.",
+            english: "Hello, I'm James.",
+            romanization: "Annyeonghaseyo, jeoneun Jeimseu-imnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -672,9 +928,21 @@ export const kits: Kit[] = [
         promptTranslation: "Signaling interest in the field.",
         question: "What do you say?",
         options: [
-          "이 분야에 관심이 많습니다.",
-          "마케팅을 공부했습니다.",
-          "잘 부탁드립니다.",
+          {
+            korean: "이 분야에 관심이 많습니다.",
+            english: "I'm very interested in this field.",
+            romanization: "I bunyae gwansimi manseumnida.",
+          },
+          {
+            korean: "마케팅을 공부했습니다.",
+            english: "I studied marketing.",
+            romanization: "Maketingeul gongbuhaesseumnida.",
+          },
+          {
+            korean: "잘 부탁드립니다.",
+            english: "Thank you in advance.",
+            romanization: "Jal butakdeurimnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -686,9 +954,21 @@ export const kits: Kit[] = [
         promptTranslation: "Wrapping up.",
         question: "What is the standard closer?",
         options: [
-          "잘 부탁드립니다.",
-          "한국어를 배우고 있습니다.",
-          "안녕하세요, 저는 제임스입니다.",
+          {
+            korean: "잘 부탁드립니다.",
+            english: "Thank you in advance.",
+            romanization: "Jal butakdeurimnida.",
+          },
+          {
+            korean: "한국어를 배우고 있습니다.",
+            english: "I'm learning Korean.",
+            romanization: "Hangugeoreul baeugo itseumnida.",
+          },
+          {
+            korean: "안녕하세요, 저는 제임스입니다.",
+            english: "Hello, I'm James.",
+            romanization: "Annyeonghaseyo, jeoneun Jeimseu-imnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -710,7 +990,7 @@ export const kits: Kit[] = [
     locale: "en",
     sortOrder: 2,
     status: "content-ready",
-    title: "Korean Job Interview Kit",
+    title: "Korean Job Interview",
     description: "Practice simple answers for basic interview questions.",
     level: "Beginner",
     purpose: "Answer basic Korean interview questions.",
@@ -761,21 +1041,25 @@ export const kits: Kit[] = [
         speaker: "Interviewer",
         korean: "지원 동기를 말씀해 주세요.",
         english: "Please tell me why you applied.",
+        romanization: "Jiwon donggireul malsseumhae juseyo.",
       },
       {
         speaker: "Applicant",
         korean: "이 회사의 성장 가능성에 관심이 많습니다.",
         english: "I'm interested in this company's growth potential.",
+        romanization: "I hoesa-ui seongjang ganeungseong-e gwansimi manseumnida.",
       },
       {
         speaker: "Interviewer",
         korean: "본인의 장점은 무엇인가요?",
         english: "What is your strength?",
+        romanization: "Bonine jangjeomeun mueosingayo?",
       },
       {
         speaker: "Applicant",
         korean: "제 장점은 책임감입니다.",
         english: "My strength is responsibility.",
+        romanization: "Je jangjeomeun chaegimgam-imnida.",
       },
     ],
     quiz: [
@@ -785,9 +1069,21 @@ export const kits: Kit[] = [
         promptTranslation: "Please tell me why you applied.",
         question: "How do you start your motivation answer?",
         options: [
-          "이 회사에 관심이 많습니다.",
-          "제 장점은 책임감입니다.",
-          "감사합니다.",
+          {
+            korean: "이 회사에 관심이 많습니다.",
+            english: "I'm very interested in this company.",
+            romanization: "I hoesa-e gwansimi manseumnida.",
+          },
+          {
+            korean: "제 장점은 책임감입니다.",
+            english: "My strength is responsibility.",
+            romanization: "Je jangjeomeun chaegimgam-imnida.",
+          },
+          {
+            korean: "감사합니다.",
+            english: "Thank you.",
+            romanization: "Gamsahamnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -799,9 +1095,21 @@ export const kits: Kit[] = [
         promptTranslation: "What is your strength?",
         question: "How do you state your strength?",
         options: [
-          "제 장점은 책임감입니다.",
-          "팀으로 일하는 것을 좋아합니다.",
-          "이 회사에 관심이 많습니다.",
+          {
+            korean: "제 장점은 책임감입니다.",
+            english: "My strength is responsibility.",
+            romanization: "Je jangjeomeun chaegimgam-imnida.",
+          },
+          {
+            korean: "팀으로 일하는 것을 좋아합니다.",
+            english: "I like working as a team.",
+            romanization: "Timeuro ilhaneun geoseul joahamnida.",
+          },
+          {
+            korean: "이 회사에 관심이 많습니다.",
+            english: "I'm very interested in this company.",
+            romanization: "I hoesa-e gwansimi manseumnida.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -813,9 +1121,21 @@ export const kits: Kit[] = [
         promptTranslation: "Talking about teamwork.",
         question: "What do you say?",
         options: [
-          "팀으로 일하는 것을 좋아합니다.",
-          "제 장점은 책임감입니다.",
-          "지원 동기를 말씀해 주세요.",
+          {
+            korean: "팀으로 일하는 것을 좋아합니다.",
+            english: "I like working as a team.",
+            romanization: "Timeuro ilhaneun geoseul joahamnida.",
+          },
+          {
+            korean: "제 장점은 책임감입니다.",
+            english: "My strength is responsibility.",
+            romanization: "Je jangjeomeun chaegimgam-imnida.",
+          },
+          {
+            korean: "지원 동기를 말씀해 주세요.",
+            english: "Please tell me why you applied.",
+            romanization: "Jiwon donggireul malsseumhae juseyo.",
+          },
         ],
         answerIndex: 0,
         explanation:
@@ -827,9 +1147,21 @@ export const kits: Kit[] = [
         promptTranslation: "Final words.",
         question: "What is the formal close?",
         options: [
-          "감사합니다.",
-          "괜찮아?",
-          "이 회사에 관심이 많습니다.",
+          {
+            korean: "감사합니다.",
+            english: "Thank you.",
+            romanization: "Gamsahamnida.",
+          },
+          {
+            korean: "괜찮아?",
+            english: "Are you ok?",
+            romanization: "Gwaenchana?",
+          },
+          {
+            korean: "이 회사에 관심이 많습니다.",
+            english: "I'm very interested in this company.",
+            romanization: "I hoesa-e gwansimi manseumnida.",
+          },
         ],
         answerIndex: 0,
         explanation:

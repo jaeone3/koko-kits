@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 
-import { CategoryCard } from "@/components/kit/CategoryCard";
 import { KitCard } from "@/components/kit/KitCard";
 import { buttonVariants } from "@/components/ui/button";
-import { getCategories, getKits } from "@/lib/kits";
+import { getKits } from "@/lib/kits";
 import { routes } from "@/lib/routes";
 import { trackEvent } from "@/lib/tracking";
 import { cn } from "@/lib/utils";
@@ -15,8 +14,7 @@ export default async function LocaleHomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const categories = getCategories();
-  const popularKits = getKits().slice(0, 3);
+  const kits = getKits();
 
   const h = await headers();
   await trackEvent({
@@ -28,7 +26,7 @@ export default async function LocaleHomePage({
   });
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-4 py-16 sm:px-6 lg:py-24">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-4 py-16 sm:px-6 lg:py-20">
       <section className="max-w-3xl">
         <p className="mb-4 text-sm font-medium text-muted-foreground">
           Koko Kits
@@ -51,35 +49,25 @@ export default async function LocaleHomePage({
             href={routes.kits}
             className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
           >
-            Browse all kits
+            Browse by category
           </Link>
         </div>
       </section>
 
       <section>
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold">Categories</h2>
+          <h2 className="text-2xl font-semibold">All kits</h2>
           <p className="mt-2 text-muted-foreground">
-            Start with Travel, Korean Life, or Career.
+            Travel, Korean Life, and Career — pick a situation and dive in.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          {categories.map((category) => (
-            <CategoryCard key={category.slug} category={category} />
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <div className="mb-6">
-          <h2 className="text-2xl font-semibold">Popular kits</h2>
-          <p className="mt-2 text-muted-foreground">
-            Initial validation starts with one representative kit per category.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          {popularKits.map((kit) => (
-            <KitCard key={`${kit.category}-${kit.slug}`} kit={kit} />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {kits.map((kit) => (
+            <KitCard
+              key={`${kit.category}-${kit.slug}`}
+              kit={kit}
+              showCategory
+            />
           ))}
         </div>
       </section>
