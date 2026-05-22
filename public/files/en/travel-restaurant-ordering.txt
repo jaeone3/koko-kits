@@ -1,0 +1,65 @@
+Koko Restaurant Ordering Kit
+Say how many people and order food at a Korean restaurant.
+
+ROLES
+
+Staff
+Seats guests and asks for the order.
+
+Customer
+Says the party size and orders food.
+
+
+KEY PHRASES
+
+1. 두 명이요.
+   Two people.
+   Du myeong-iyo.
+
+2. 김치찌개 하나 주세요.
+   One kimchi stew, please.
+   Gimchijjigae hana juseyo.
+
+3. 물 좀 주세요.
+   Some water, please.
+   Mul jom juseyo.
+
+4. 휴지 좀 주세요.
+   Some tissues, please.
+   Hyuji jom juseyo.
+
+5. 계산할게요.
+   I'll pay / Check, please.
+   Gyesanhalgeyo.
+
+
+SHORT DIALOGUE
+
+Staff:
+몇 분이세요?
+How many people?
+
+Customer:
+두 명이요.
+Two people.
+
+Staff:
+주문하시겠어요?
+Are you ready to order?
+
+Customer:
+김치찌개 하나 주세요.
+One kimchi stew, please.
+
+
+BLANK PRACTICE
+
+1. Staff: 몇 분이세요?
+   You: ________________________________
+
+2. Staff: 주문하시겠어요?
+   You: ________________________________
+
+
+Want to practice this as a real conversation?
+Try it in Koko.
