@@ -1,7 +1,9 @@
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 
 import { KitCard } from "@/components/kit/KitCard";
 import { getCategories, getCategory, getKitsByCategory } from "@/lib/kits";
+import { trackEvent } from "@/lib/tracking";
 
 export function generateStaticParams() {
   return getCategories().map((category) => ({
@@ -13,9 +15,9 @@ export function generateStaticParams() {
 export default async function CategoryPage({
   params,
 }: {
-  params: Promise<{ categorySlug: string }>;
+  params: Promise<{ locale: string; categorySlug: string }>;
 }) {
-  const { categorySlug } = await params;
+  const { locale, categorySlug } = await params;
   const category = getCategory(categorySlug);
 
   if (!category) {
@@ -23,6 +25,15 @@ export default async function CategoryPage({
   }
 
   const kits = getKitsByCategory(category.slug);
+
+  const h = await headers();
+  await trackEvent({
+    eventName: "page_view",
+    locale,
+    source: `category:${category.slug}`,
+    referrer: h.get("referer"),
+    userAgent: h.get("user-agent"),
+  });
 
   return (
     <section className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6">

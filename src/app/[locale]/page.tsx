@@ -1,15 +1,31 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 
 import { CategoryCard } from "@/components/kit/CategoryCard";
 import { KitCard } from "@/components/kit/KitCard";
 import { buttonVariants } from "@/components/ui/button";
 import { getCategories, getKits } from "@/lib/kits";
 import { routes } from "@/lib/routes";
+import { trackEvent } from "@/lib/tracking";
 import { cn } from "@/lib/utils";
 
-export default function LocaleHomePage() {
+export default async function LocaleHomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const categories = getCategories();
   const popularKits = getKits().slice(0, 3);
+
+  const h = await headers();
+  await trackEvent({
+    eventName: "page_view",
+    locale,
+    source: "home",
+    referrer: h.get("referer"),
+    userAgent: h.get("user-agent"),
+  });
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-4 py-16 sm:px-6 lg:py-24">

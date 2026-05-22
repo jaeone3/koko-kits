@@ -1,8 +1,25 @@
+import { headers } from "next/headers";
+
 import { KitCard } from "@/components/kit/KitCard";
 import { getCategories, getKitsByCategory } from "@/lib/kits";
+import { trackEvent } from "@/lib/tracking";
 
-export default function KitsPage() {
+export default async function KitsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const categories = getCategories();
+
+  const h = await headers();
+  await trackEvent({
+    eventName: "page_view",
+    locale,
+    source: "kits_index",
+    referrer: h.get("referer"),
+    userAgent: h.get("user-agent"),
+  });
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-12 sm:px-6">

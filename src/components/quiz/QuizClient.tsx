@@ -1,13 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 
+import { trackQuizEvent } from "@/app/actions/track";
 import { buttonVariants } from "@/components/ui/button";
 import type { QuizQuestion } from "@/content/kits/types";
 import { cn } from "@/lib/utils";
 
 type QuizClientProps = {
+  kitSlug: string;
+  locale: string;
   kitTitle: string;
   kitHref: string;
   kokoHref: string;
@@ -15,6 +18,8 @@ type QuizClientProps = {
 };
 
 export function QuizClient({
+  kitSlug,
+  locale,
   kitTitle,
   kitHref,
   kokoHref,
@@ -22,6 +27,8 @@ export function QuizClient({
 }: QuizClientProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
+  const startedRef = useRef(false);
+  const completedRef = useRef(false);
 
   const currentQuestion = questions[currentIndex];
   const currentAnswer = answers[currentIndex];
@@ -33,6 +40,21 @@ export function QuizClient({
       }, 0),
     [questions, answers],
   );
+
+  useEffect(() => {
+    if (questions.length === 0) return;
+    if (startedRef.current) return;
+    startedRef.current = true;
+    void trackQuizEvent({ eventName: "quiz_start", kitSlug, locale });
+  }, [questions.length, kitSlug, locale]);
+
+  useEffect(() => {
+    if (questions.length === 0) return;
+    if (!isFinished) return;
+    if (completedRef.current) return;
+    completedRef.current = true;
+    void trackQuizEvent({ eventName: "quiz_complete", kitSlug, locale });
+  }, [isFinished, questions.length, kitSlug, locale]);
 
   if (questions.length === 0) {
     return (

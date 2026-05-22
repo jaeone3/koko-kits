@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { Download, FileQuestion, Layers, MessageCircle } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { getKit, getKits } from "@/lib/kits";
+import { trackEvent } from "@/lib/tracking";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -17,14 +19,24 @@ export function generateStaticParams() {
 export default async function KitDetailPage({
   params,
 }: {
-  params: Promise<{ categorySlug: string; kitSlug: string }>;
+  params: Promise<{ locale: string; categorySlug: string; kitSlug: string }>;
 }) {
-  const { categorySlug, kitSlug } = await params;
+  const { locale, categorySlug, kitSlug } = await params;
   const kit = getKit(categorySlug, kitSlug);
 
   if (!kit) {
     notFound();
   }
+
+  const h = await headers();
+  await trackEvent({
+    eventName: "page_view",
+    kitSlug: kit.slug,
+    locale,
+    source: "kit_detail",
+    referrer: h.get("referer"),
+    userAgent: h.get("user-agent"),
+  });
 
   const formatCount = (count: number, label: string) =>
     `${count || "TBD"} ${label}${count === 1 ? "" : "s"}`;
